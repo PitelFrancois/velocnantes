@@ -1,0 +1,298 @@
+/*----------------------------------------------*/
+/*==MAP ET INFORMATIONS DE RESERVATION*/
+/*----------------------------------------------*/
+
+	/*    BLOC MAP    */
+
+body {
+	margin: 0px ;
+	padding: 0px ;
+}
+.wrap2 {
+	display: flex ;
+	flex-direction: row ;
+	width: 90% ;
+	margin: auto ;
+	margin-top: 25px ;
+	margin-bottom: 25px ;
+}
+.map {
+	width: 50% ;
+	height: 600px ;
+	margin-top: 70px ;
+	margin-right: 10px ;
+	margin-left: 10px ;
+	box-shadow: -5px -5px 1px rgba(72,203,123,1) ;
+	position: relative ;
+	z-index: 1 ;
+}
+#mapid {
+	width: 100% ;
+	height: 600px ;
+	box-shadow: 5px 5px 1px rgba(130,240,167,1) ;
+	z-index: 1 ;
+}
+
+	/*    POPUP DANS LA MAP    */	
+
+.leaflet-popup-content {
+	text-align: center ;
+}
+
+	/*    BLOC INFORMATION    */
+
+.service {
+	width: 50% ;
+	height: 680px ;
+	margin-top: 40px ;
+	margin-left: 10px ;
+	display: flex ;
+	flex-direction: column ;
+	justify-content: space-around ;
+	text-align: center ; 
+}
+.service h2 {
+	text-align: center ;
+	font-size: 1.1em ;
+	text-transform: uppercase ;
+	margin-bottom: 0px ; 
+}
+.service .trait {
+	width: 80% ;
+	height: 2px ;
+	background-color: #2FBF71 ;
+	margin-right: auto ;
+	margin-left: auto ;
+}
+.service .table1 {
+	width: 100% ;
+}
+.service .table1 tr {
+	display: flex ;
+	flex-direction: row ;
+	width: 70% ;
+	height: auto ;
+	min-height: 50px ;
+	margin: auto ;
+	border-bottom: 1px solid #2FBF71 ;
+	padding-right: 10px ;
+}
+.service table td {
+	height: 20px ;
+	padding: 5px 0px ; 
+}
+.service td {
+	text-transform: uppercase ;
+	font-size: 0.9em ;
+}
+.service .td_detail {
+	width: 70% ;
+	margin: auto ;
+	font-size: 1.1em ;
+	font-weight: bold ;
+}
+#station_status{
+	height: auto ;
+	min-height: 20px ;
+	background-color: white ;
+	margin: auto ;
+	width: 70% ;
+	padding-top: 10px ;
+}
+#station_nom {
+	height: auto ;
+	min-height: 20px ;
+	background-color: white ;
+	margin: auto ;
+	width: 70% ;
+	padding-top: 10px ;
+}
+.service #station_adresse {
+	height: auto ;
+	min-height: 20px ;
+	background-color: white ;
+	margin: auto ;
+	width: 70% ;
+	padding-top: 10px ;
+}
+.service #station_places {
+	background-color: white ;
+	border-radius: 50px ;
+	margin: auto ;
+	margin-top: 10px ;
+	font-size: 3em ;
+	width: 120px ;
+	height: 55px ;
+	border: 2px solid #2FBF71 ; 
+}
+.service #station_velos {
+	background-color: white ;
+	border-radius: 50px ;
+	margin: auto ;
+	margin-top: 10px ;
+	font-size: 3em ;
+	width: 120px ;
+	height: 55px ;
+	border: 2px solid #2FBF71 ;
+}
+.service .table2 {
+	width: 100% ;
+}
+.table2 tbody {
+	display: flex ;
+	flex-direction: row ;
+	width: 80% ;
+	margin: auto ;
+	justify-content: space-around ;
+}
+.table2 tr {
+	display: flex ;
+	flex-direction: column ;
+}
+
+	/*    BLOC RESERVATION    */
+
+.service .reservation {
+	width: 80% ;
+	height: 200px ;
+	margin: auto ;
+	margin-top: 0px ;
+	margin-bottom: 10px ; 
+	color: black ;
+	font-family: 'Roboto Condensed', sans-serif ;
+}
+.service form {
+	display: flex ;
+	flex-direction: column ;
+	width: 80% ;
+	height: 200px ;
+	margin: auto ; 
+}
+.service label {
+	text-transform: uppercase ;
+	margin: 10px 0px ;
+}
+.service .label_2 {
+	margin-top: 0px ;
+}
+.service input {
+	width: 70% ;
+	height: 30px ;
+	text-align: center ;
+	margin: auto ;
+	margin-bottom: 10px ;
+	border: 2px solid #2FBF71 ;
+}
+
+
+	/*    BOUTON RESERVATION    */
+
+.service button {
+	width: 55% ;
+	height: 50px ;
+	margin: auto ;
+	text-transform: uppercase ;
+	border: 0px solid ;
+	background-color: #065143 ;
+	border: 2px solid white ;
+	color: white ;
+	font-size: 1.3em ;
+	margin-bottom: 10px ;
+	font-family: 'Roboto Condensed', sans-serif ;
+	cursor: pointer ;
+}
+
+/*----------------------------------------------*/
+/*==MEDIAS QUERIS*/
+/*----------------------------------------------*/
+
+@media screen and (max-width: 768px) {
+	
+		/*    BLOC MAP    */
+
+	.wrap2 {
+		display: block ;
+		margin-top: 50px ;
+	}
+	.map {
+		margin: auto ;
+		width: 80% ;
+		height: 350px ;
+	}
+	#mapid {
+		height: 350px ;
+	}
+
+		/*    BLOC INFORMATION    */
+
+	.service {
+		margin: auto ;
+		width: 80% ;
+		margin-top: 30px ;
+	}
+	.service .table1 tr {
+		display: flex ;
+		flex-direction: row ;
+		width: 90% ;
+		height: auto ;
+		min-height: 50px ;
+		margin: auto ;
+		border-bottom: 1px solid #2FBF71 ;
+		padding-right: 10px ;
+	}
+	.service table td {
+		height: 20px ;
+		padding: 5px 0px ; 
+	}
+	.service .td_detail {
+		width: 70% ;
+		margin: auto ;
+		font-size: 0.9em ;
+		font-weight: bold ;
+	}
+	.service td {
+		text-transform: uppercase ;
+		font-size: 0.7em ;
+		
+	}
+	.table2 tbody{
+		flex-direction: column ;
+	}
+	.table2 td {
+		margin-top: 16px ;
+	}
+
+		/*    BLOC RESERVATION    */
+
+	.service .reservation {
+		width: 90% ;
+		height: 200px ;
+		margin: auto ;
+		margin-top: 0px ;
+		margin-bottom: 10px ; 
+		color: black ;
+		font-family: 'Roboto Condensed', sans-serif ;
+	}
+	.service input {
+		width: 100% ;
+		height: 30px ;
+		text-align: center ;
+		margin: auto ;
+		margin-bottom: 10px ;
+		border: 2px solid #2FBF71 ;
+	}
+	.service button {
+		width: 70% ;
+		height: 50px ;
+		margin: auto ;
+		text-transform: uppercase ;
+		border: 0px solid ;
+		background-color: #065143 ;
+		border: 2px solid white ;
+		color: white ;
+		font-size: 1.3em ;
+		margin-bottom: 10px ;
+		font-family: 'Roboto Condensed', sans-serif ;
+	}
+	
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Veloc</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
+	<link rel="stylesheet" type="text/css" href="css/map.css">
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" type="text/css" href="css/canvas.css">
+	<meta descrition="Véloc propose un service de location de vélos éparpiller parmi plus de 120 stations dans la ville de Nantes">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+	integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+	crossorigin=""/>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+	integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+	crossorigin=""></script>
+	<script src="https://kit.fontawesome.com/0d1298be20.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	
+										<!--      MENU      -->
+	
+	<header>
+		<div class="navbar">
+			<div class="logo">
+				<p>Véloc</p>
+			</div>
+			<nav class="menu">
+				<ul>
+					<li>
+						<a href="#">Accueil</a>
+					</li>
+					<li>
+						<a href="#mapid">Réserver</a>
+					</li>
+					<li>
+						<a href="#">Connexion</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+										<!--      SLIDER      -->
+	
+	<div class="wrap">
+		<div id="slider">
+			<div class="slide slide1">
+				<div class="slide-content">
+					<span class="span1">Bienvenue sur Véloc</span>
+					<span class="span2">Visitez la ville de Nantes à vélo</span>
+				</div>
+			</div>
+			<div class="slide slide2">
+				<div class="slide-content">
+					<span class="span1">Bienvenue sur Véloc</span>
+					<span class="span2">Visitez la ville de Nantes à vélo</span>
+				</div>
+			</div>
+			<div class="slide slide3">
+				<div class="slide-content">
+					<span class="span1">Bienvenue sur Véloc</span>
+					<span class="span2">Visitez la ville de Nantes à vélo</span>
+				</div>
+			</div>
+			<div class="slide slide4">
+				<div class="slide-content">
+					<span class="span1">Bienvenue sur Véloc</span>
+					<span class="span2">Visitez la ville de Nantes à vélo</span>
+				</div>
+			</div>
+			<div class="slide slide5">
+				<div class="slide-content">
+					<span class="span1">Bienvenue sur Véloc</span>
+					<span class="span2">Visitez la ville de Nantes à vélo</span>
+
+				</div>
+			</div>
+		</div>
+		<div class="bouton_gauche">
+			<i class="fas fa-chevron-left"></i>
+		</div>
+		<div class="bouton_droite">
+			<i class="fas fa-chevron-right"></i>
+		</div>
+	</div>
+	<div class="bouton_pause">
+		<i class="fas fa-pause"></i>
+	</div>
+	<div class="bouton_lecture">
+		<i class="fas fa-play"></i>
+	</div>
+	
+											<!--      CARTE      -->	
+
+	<div class="wrap2">
+		<section class="map">
+			<div id="mapid"></div>
+
+											<!--      CANVAS      -->
+
+			<div class="signature">
+				<div class="signature2">
+					<i class="far fa-window-close" type="button"></i>
+					<div class="logo2">
+						<p>Véloc</p>
+					</div>
+					<p class="p1">Afin de valider la réservation de votre vélo, veuillez signer s'il vous plaît.</p>
+					<canvas id="canvas"></canvas>
+					<div class="bouton">
+						<button id="valider" type="button">valider</button>
+						<button id="effacer" type="button">effacer</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+											<!--      INFORMARTION DES STATIONS      -->
+
+		<section class="service">
+			<h2>Détails de station</h2>
+			<span class="trait"></span>
+			<table class="table1">
+				<tbody>
+					<tr>
+						<td class="td_detail">statut</td>
+						<td id="station_status" class="td_2">
+							<span></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="td_detail">nom</td>
+						<td id="station_nom" class="td_2">
+							<span></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="td_detail">adresse</td>
+						<td id="station_adresse" class="td_2">
+							<span></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="table2">
+				<tbody>
+					<tr>
+						<td>vélos disponibles</td>
+						<td id="station_velos" class="td_2">
+							<span></span>
+						</td>
+					</tr>
+					<tr>
+						<td>places disponibles</td>
+						<td id="station_places" class="td_2">
+							<span></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="reservation">	
+				<form>
+					<label>Nom</label>
+					<input type="text" id="nom">
+					<label class="label_2" >Prénom</label>
+					<input type="text" id="prenom">
+					<button type="button" id="bouton_reservation">réserver</button>
+				</form>
+			</div>
+		</section>
+	</div>
+
+											<!--      FOOTER      -->
+	
+	<footer id="footer">
+		<div id="confirmation">
+			<div id="information_réservation"></div>
+			<div id="timer"></div>
+			<button type="button" id="annulation">Annuler la réservation</button>
+		</div>
+	</footer>
+	
+											<!--      JAVASCRISPT      -->
+	
+	<script type="text/javascript" src="js/slider.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+	<script type="text/javascript" src="js/canvas.js"></script>
+	<script type="text/javascript" src="js/veloc.js"></script>
+	<script type="text/javascript" src="js/timer.js"></script>
+</body>
+</html>

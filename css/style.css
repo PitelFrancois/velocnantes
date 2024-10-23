@@ -1,0 +1,125 @@
+/*----------------------------------------------*/
+/*==HEADER ET NAV*/
+/*----------------------------------------------*/
+
+	/*    BLOC HEADER     */
+
+body{
+	margin: 0px ;
+	padding: 0px ;
+	width: 100% ;
+	font-family:'arial' ;
+	background-color: white ;
+}
+header{
+	width: 100% ;
+	height: 85px ;
+	background-color: white ;
+}
+
+	/*    BLOC NAV     */
+
+.navbar{
+	display: flex ;
+	height: 100% ;
+	flex-direction: row ;
+	justify-content: space-around ;
+	margin: auto ;
+}
+
+	/*    LOGO     */
+
+.logo{
+	margin-left: 20% ;
+}
+.logo p{
+	font-size: 3em ; 
+	text-decoration: none ;
+	color: #065143 ;
+	font-family: 'Pacifico', cursive;
+	margin: auto ;
+}
+
+	/*    MENU     */
+
+.menu{
+	margin: auto ;
+}
+.menu ul{
+	list-style: none ;
+	display: flex ;
+	flex-direction: row ;
+	font-family: 'Roboto Condensed', sans-serif ;
+}	
+.menu ul li{
+	padding: 10px 15px ;
+}
+.menu ul li a{
+	text-decoration: none ;
+	color: black ;
+	font-size: 1em ;
+}
+
+/*----------------------------------------------*/
+/*==MEDIAS QUERIS*/
+/*----------------------------------------------*/
+
+@media screen and (max-width: 768px) {
+	
+		/*    LOGO     */
+
+	.logo {
+		margin-left: 10% ;
+	}
+	.logo p {
+		font-size: 2em ; 
+		text-decoration: none ;
+		color: #065143 ;
+		font-family: 'Pacifico', cursive;
+		margin: auto ;
+		margin-top: 9px ;
+	}
+
+		/*    MENU     */
+
+	.menu ul li a {
+		text-decoration: none ;
+		color: black ;
+		font-size: 0.9em ;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	
+		/*    LOGO     */
+
+	.logo{
+		margin-left: 10% ;
+	}
+	.logo p{
+		font-size: 1.5em ; 
+		text-decoration: none ;
+		color: #065143 ;
+		font-family: 'Pacifico', cursive;
+		margin: auto ;
+		margin-top: 16px ;
+	}
+
+		/*    MENU     */
+
+	.menu ul {
+		padding-left: 0px ;
+	}
+	.menu ul li{
+		padding: 5px ;
+	}
+	.menu ul li a{
+		text-decoration: none ;
+		color: black ;
+		font-size: 0.7em ;
+	}
+}
+
+
+
+
